@@ -1,0 +1,18 @@
+{% extends 'photoinfo/base.html' %}
+
+{% block title %}
+    Photo List
+{% endblock %}
+
+{% block content %}
+    <h2>Photo List</h2>
+    <ul>
+        {% for photo in photo_list %}
+            <li>
+                <a href="">{{ photo }}</a>
+            </li>
+        {% empty %}
+            <li><em>There are currently no photos available.</em></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

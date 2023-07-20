@@ -1,0 +1,18 @@
+{% extends 'photoinfo/base.html' %}
+
+{% block title %}
+    Photo Type List
+{% endblock %}
+
+{% block content %}
+    <h2>Photo Type List</h2>
+    <ul>
+        {% for type in type_list %}
+            <li>
+                <a href="">{{ type }}</a>
+            </li>
+        {% empty %}
+            <li><em>There are currently no photo types available.</em></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

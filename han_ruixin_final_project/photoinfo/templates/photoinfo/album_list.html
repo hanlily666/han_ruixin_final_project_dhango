@@ -1,0 +1,18 @@
+{% extends 'photoinfo/base.html' %}
+
+{% block title %}
+    Album List
+{% endblock %}
+
+{% block content %}
+    <h2>Album List</h2>
+    <ul>
+        {% for album in album_list %}
+            <li>
+                <a href="">{{ album }}</a>
+            </li>
+        {% empty %}
+            <li><em>There are currently no albums available.</em></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
